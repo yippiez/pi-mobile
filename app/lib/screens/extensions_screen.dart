@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:comment/components/confirmation_dialog.dart';
-import 'package:comment/components/extension_card.dart';
-import 'package:comment/models/extension_data.dart';
-import 'package:comment/providers/extensions_provider.dart';
+import 'package:pi_mobile/components/confirmation_dialog.dart';
+import 'package:pi_mobile/components/extension_card.dart';
+import 'package:pi_mobile/models/extension_data.dart';
+import 'package:pi_mobile/providers/extensions_provider.dart';
 
 class ExtensionsScreen extends StatelessWidget {
   const ExtensionsScreen({super.key});

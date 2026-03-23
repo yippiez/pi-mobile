@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:comment/models/card.dart';
+import 'package:pi_mobile/models/card.dart';
 
 class CardData {
   final String id;

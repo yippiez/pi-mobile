@@ -1,7 +1,7 @@
 import 'dart:ui' as ui;
 
-import 'package:comment/components/new_card_popup.dart';
-import 'package:comment/components/settings_popup.dart';
+import 'package:pi_mobile/components/new_card_popup.dart';
+import 'package:pi_mobile/components/settings_popup.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
 

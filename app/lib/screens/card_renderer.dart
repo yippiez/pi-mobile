@@ -1,7 +1,7 @@
-import 'package:comment/models/card.dart';
-import 'package:comment/components/confirmation_dialog.dart';
-import 'package:comment/providers/card_providers.dart';
-import 'package:comment/shared/card_color_palette.dart';
+import 'package:pi_mobile/models/card.dart';
+import 'package:pi_mobile/components/confirmation_dialog.dart';
+import 'package:pi_mobile/providers/card_providers.dart';
+import 'package:pi_mobile/shared/card_color_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

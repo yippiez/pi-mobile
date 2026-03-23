@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:comment/components/confirmation_dialog.dart';
-import 'package:comment/providers/card_providers.dart';
+import 'package:pi_mobile/components/confirmation_dialog.dart';
+import 'package:pi_mobile/providers/card_providers.dart';
 
 class SelectionAppBar extends StatefulWidget implements PreferredSizeWidget {
   final bool isArchivedScreen;

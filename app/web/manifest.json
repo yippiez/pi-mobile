@@ -1,6 +1,6 @@
 {
-    "name": "comment",
-    "short_name": "comment",
+    "name": "pi-mobile",
+    "short_name": "pi-mobile",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

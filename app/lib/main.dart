@@ -1,20 +1,20 @@
-import 'package:comment/models/card.dart';
+import 'package:pi_mobile/models/card.dart';
 import 'package:flutter/material.dart' hide Card;
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:comment/shared/theme.dart';
-import 'package:comment/shared/uuid.dart';
-import 'package:comment/components/card.dart';
-import 'package:comment/components/bottom_bar.dart';
-import 'package:comment/components/selection_app_bar.dart';
-import 'package:comment/draggable_masonry_layout.dart';
-import 'package:comment/providers/card_providers.dart';
-import 'package:comment/providers/connection_settings_provider.dart';
-import 'package:comment/providers/extensions_provider.dart';
-import 'package:comment/screens/archived_cards.dart';
-import 'package:comment/screens/card_renderer.dart';
-import 'package:comment/screens/connections_screen.dart';
-import 'package:comment/screens/extensions_screen.dart';
+import 'package:pi_mobile/shared/theme.dart';
+import 'package:pi_mobile/shared/uuid.dart';
+import 'package:pi_mobile/components/card.dart';
+import 'package:pi_mobile/components/bottom_bar.dart';
+import 'package:pi_mobile/components/selection_app_bar.dart';
+import 'package:pi_mobile/draggable_masonry_layout.dart';
+import 'package:pi_mobile/providers/card_providers.dart';
+import 'package:pi_mobile/providers/connection_settings_provider.dart';
+import 'package:pi_mobile/providers/extensions_provider.dart';
+import 'package:pi_mobile/screens/archived_cards.dart';
+import 'package:pi_mobile/screens/card_renderer.dart';
+import 'package:pi_mobile/screens/connections_screen.dart';
+import 'package:pi_mobile/screens/extensions_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

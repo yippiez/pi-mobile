@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:comment/models/extension_data.dart';
+import 'package:pi_mobile/models/extension_data.dart';
 
 class ExtensionsProvider extends ChangeNotifier {
   List<ExtensionData> _extensions = [];

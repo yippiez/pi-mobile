@@ -1,8 +1,8 @@
-import 'package:comment/components/card.dart';
-import 'package:comment/components/selection_app_bar.dart';
-import 'package:comment/draggable_masonry_layout.dart';
-import 'package:comment/providers/card_providers.dart';
-import 'package:comment/screens/card_renderer.dart';
+import 'package:pi_mobile/components/card.dart';
+import 'package:pi_mobile/components/selection_app_bar.dart';
+import 'package:pi_mobile/draggable_masonry_layout.dart';
+import 'package:pi_mobile/providers/card_providers.dart';
+import 'package:pi_mobile/screens/card_renderer.dart';
 import 'package:flutter/material.dart' hide Card;
 import 'package:provider/provider.dart';
 

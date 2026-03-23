@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:comment/models/card.dart';
-import 'package:comment/shared/card_color_palette.dart';
+import 'package:pi_mobile/models/card.dart';
+import 'package:pi_mobile/shared/card_color_palette.dart';
 
 class Card extends StatelessWidget {
   final String title;

@@ -1,4 +1,4 @@
-import 'package:comment/models/card.dart';
+import 'package:pi_mobile/models/card.dart';
 import 'package:flutter/material.dart';
 
 extension CardColorPalette on CardColors {
