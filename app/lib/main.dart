@@ -1,3 +1,4 @@
+import 'package:pi_mobile/components/confirmation_dialog.dart';
 import 'package:pi_mobile/models/card.dart';
 import 'package:flutter/material.dart' hide Card;
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
@@ -179,11 +180,38 @@ class _MyHomePageState extends State<MyHomePage> {
                   cardsProvider.toggleSelection(cardData.id);
                   return;
                 }
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => CardRendererScreen(cardId: cardData.id),
-                  ),
-                );
+                switch (cardData.status) {
+                  case CardStatus.normal:
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => CardRendererScreen(cardId: cardData.id),
+                      ),
+                    );
+                    break;
+                  case CardStatus.hasUpdate:
+                    cardsProvider.setCardStatus(cardData.id, CardStatus.normal);
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => CardRendererScreen(cardId: cardData.id),
+                      ),
+                    );
+                    break;
+                  case CardStatus.stale:
+                    showGlassConfirmationDialog(
+                      context,
+                      title: "This card is stale meaning it won't update any sessions and is read-only",
+                      confirmLabel: "View",
+                      confirmTextColor: Colors.red,
+                      onConfirm: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => CardRendererScreen(cardId: cardData.id),
+                          ),
+                        );
+                      }
+                    );
+                    break;
+                } 
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(

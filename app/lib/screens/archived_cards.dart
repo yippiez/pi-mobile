@@ -1,3 +1,5 @@
+import 'package:pi_mobile/components/confirmation_dialog.dart';
+import 'package:pi_mobile/models/card.dart';
 import 'package:pi_mobile/components/card.dart';
 import 'package:pi_mobile/components/selection_app_bar.dart';
 import 'package:pi_mobile/draggable_masonry_layout.dart';
@@ -29,11 +31,38 @@ class ArchivedCardsScreen extends StatelessWidget {
                   cardsProvider.toggleSelection(cardData.id);
                   return;
                 }
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => CardRendererScreen(cardId: cardData.id),
-                  ),
-                );
+                switch (cardData.status) {
+                  case CardStatus.normal:
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => CardRendererScreen(cardId: cardData.id),
+                      ),
+                    );
+                    break;
+                  case CardStatus.hasUpdate:
+                    cardsProvider.setCardStatus(cardData.id, CardStatus.normal);
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => CardRendererScreen(cardId: cardData.id),
+                      ),
+                    );
+                    break;
+                  case CardStatus.stale:
+                    showGlassConfirmationDialog(
+                      context,
+                      title: "This card is stale meaning it won't update any sessions and is read-only",
+                      confirmLabel: "View",
+                      confirmTextColor: Colors.red,
+                      onConfirm: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => CardRendererScreen(cardId: cardData.id),
+                          ),
+                        );
+                      }
+                    );
+                    break;
+                } 
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(
