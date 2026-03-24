@@ -8,6 +8,7 @@ class CardData {
   final bool isArchived;
   final CardColors color;
   final CardStatus status;
+  final String cardType;
 
   const CardData({
     required this.id,
@@ -16,6 +17,7 @@ class CardData {
     this.isArchived = false,
     this.color = CardColors.gray,
     this.status = CardStatus.normal,
+    this.cardType = 'chat',
   });
 
   CardData copyWith({
@@ -25,6 +27,7 @@ class CardData {
     bool? isArchived,
     CardColors? color,
     CardStatus? status,
+    String? cardType,
   }) {
     return CardData(
       id: id ?? this.id,
@@ -33,6 +36,7 @@ class CardData {
       isArchived: isArchived ?? this.isArchived,
       color: color ?? this.color,
       status: status ?? this.status,
+      cardType: cardType ?? this.cardType,
     );
   }
 }
