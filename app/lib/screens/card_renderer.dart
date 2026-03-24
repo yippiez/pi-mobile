@@ -1,5 +1,6 @@
 import 'package:pi_mobile/models/card.dart';
 import 'package:pi_mobile/components/confirmation_dialog.dart';
+import 'package:pi_mobile/components/bottom_bar_card_content.dart';
 import 'package:pi_mobile/providers/card_providers.dart';
 import 'package:pi_mobile/shared/card_color_palette.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +58,17 @@ class CardRendererScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const SizedBox.expand(),
+      body: Stack(
+        children: [
+          const SizedBox.expand(),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: BottomBarCardContent(onSubmit: () {}, onVoice: () {}),
+          ),
+        ],
+      ),
     );
   }
 
